@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+  
+  <head>
+    <title>Vertical Carousel</title>
+    <style>
+      .carousel-holder {
+        position:relative;
+        height: 300px;
+        width: 800px;
+        overflow:hidden;
+      }
+      
+      .slide-links {
+        height: 100%;
+        position:absolute;
+        left:600px;
+      }
+      
+      .slides, .slide {
+        height: 100%;
+      }
+      
+      .slides {
+        position:absolute;
+        top:-500%;
+        left:0;
+        width:600px;
+        transition:top 1s ease-out;
+      }
+      
+      .slide {
+        background-repeat: no-repeat;
+        background-position:50% 50%;
+        background-size:cover;
+      }
+      
+      .slides.one {top:0%;}
+      .slides.two {top:-100%;}
+      .slides.three {top:-200%;}
+      .slides.four {top:-300%;}
+      .slides.five {top:-400%;}
+      .slides.six {top:-500%;}
+      
+    </style>
+  </head>
+  <body>
+    <div class='carousel-holder'>
+      
+      <div class='slides'>
+        <div 
+          class='slide' 
+          style='background-image:url(http://www.placekitten.com/500/200);'>
+        </div>
+        <div 
+          class='slide' 
+          style='background-image:url(http://www.placekitten.com/600/200);'>
+        </div>
+        <div 
+          class='slide' 
+          style='background-image:url(http://www.placekitten.com/500/300);'>
+        </div>
+        <div 
+          class='slide' 
+          style='background-image:url(http://www.placekitten.com/650/200);'>
+        </div>
+        <div 
+          class='slide' 
+          style='background-image:url(http://www.placekitten.com/500/200);'>
+        </div>
+        <div 
+          class='slide' 
+          style='background-image:url(http://www.placekitten.com/650/200);'>
+        </div>
+        <div 
+          class='slide' 
+          style='background-image:url(http://www.placekitten.com/600/200);'>
+        </div>
+      </div>
+      
+      <div class='slide-links'>
+        <a href='#' data-slide='one' class='slide-link'>one</a><br>
+        <a href='#' data-slide='two' class='slide-link'>two</a><br>
+        <a href='#' data-slide='three' class='slide-link'>three</a><br>
+        <a href='#' data-slide='four' class='slide-link'>four</a><br>
+        <a href='#' data-slide='five' class='slide-link'>five</a><br>
+        <a href='#' data-slide='six' class='slide-link'>six</a><br>
+      </div>
+    </div>
+    
+  </body>
+</html>
